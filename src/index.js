@@ -1,3 +1,8 @@
+
+function fetchApiData() {
+    const url = `https://superheroapi.com/api/${apiKey}/search/${searchTerm}`;
+    fetch(url)
+=======
 import { apiKey } from "./key.js";
 
 function handleAPIQuery(event) {
