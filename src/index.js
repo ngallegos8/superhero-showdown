@@ -1,9 +1,4 @@
-//DELETE These lines
-
-// api key reference: 7448105941879772
-
-//DELETE above these lines 
-
+import { apiKey } from './key.js';
 
 function fetchApiData() {
     const url = `https://superheroapi.com/api/${apiKey}/search/${searchTerm}`;
@@ -14,3 +9,6 @@ function fetchApiData() {
         })
         .catch(error => console.log(error));
 }
+
+fetchApiData(superman)
+
