@@ -1,3 +1,4 @@
+
 /*
 api snippet
 {
@@ -165,6 +166,7 @@ api snippet
 import {apiKey} from './key.js';
 console.log(apiKey);
 
+// function to search the api for hero stats
 function pullHeroStats(searchTerm) {
     fetch(`https://www.superheroapi.com/api.php/${apiKey}/search/${searchTerm}`)
         .then(response => response.json())
