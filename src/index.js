@@ -301,22 +301,3 @@ function renderHeroCard(searchTerm) {
     return heroCard;
 
 }
-
-//function to render the results of the API query into the DOM
-function renderResults(searchTerm) {
-    let heroA = renderHeroCard(searchTerm);
-    let heroB = renderHeroCard(searchTerm);
-}
-
-//function to handle the search form submission
-function handleSearchFormSubmit(event) {
-    event.preventDefault();
-    let searchTerm = document.querySelector('#search-term').value;
-    renderResults(searchTerm);
-}
-
-//function to initialize the app
-function init() {
-    document.querySelector('#search-form').addEventListener('submit', handleSearchFormSubmit);
-}
-init();
