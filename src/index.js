@@ -1,14 +1,9 @@
 import { apiKey } from './key.js';
 
-function fetchApiData() {
-    const url = `https://superheroapi.com/api/${apiKey}/search/${searchTerm}`;
-    fetch(url)
+
+fetch(`https://www.superheroapi.com/api.php/${apiKey}/search/a`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
         })
         .catch(error => console.log(error));
-}
-
-fetchApiData(superman)
-
