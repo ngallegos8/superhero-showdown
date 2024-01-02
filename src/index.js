@@ -1,5 +1,83 @@
+/*
+HTML snippet:
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="key.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+
+    <title>Superhero Showdown</title>
+</head>
+<body>
+    <div id="top">
+        <h1>Superhero Showdown</h1>
+    </div>
+    <hr/>
+
+    <nav id="hero-list">
+    <!-- javascript make function to select this nav by id and forEach(hero) 1. create a new image element, 2. select hero image from API, 3. append to this nav, 4. add event listener for mouseover and 5. add event listener for click to select-->  
+    </nav>
+    
+    <div id="hero-info">
+        <img id="hero-a-image" src="" />
+        <div>
+            <h2 id="hero-a-name">Name1</h2>
+        </div>
+        <img id="hero-b-image" src="" />
+        <div>
+            <h2 id="hero-b-name">Name2</h2>
+        </div>
+    </div>
+
+    <div>
+        <button id="fight">Fight!</button>
+    </div>
+
+    <div>
+        <p id="result">Winner message displayed here</p>
+    </div>
+    
+    <div>
+        <p id=""></p>
+    </div>
+
+
+
+
+
+
+<!-- handle js -->
+<script src="index.js"></script>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <!-- Include the CSS file here -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="key.js" type="module"></script>
+    <script defer src="index.js" type="module"></script>
+</head>
+<body>
+
+    <div id="main">
+        <h1 id="message">Test Message</h1>
+    </div>
+    <!-- Include the script tag here -->
+    <script src="index.js"></script>
+</body>
+</html>
+*/
+
 
 /*
+
 api snippet
 {
   "response": "success",
@@ -163,29 +241,27 @@ api snippet
 
 //function to search the API for the hero stats and average the 6 stats into one stat=overallPower (intelligence, strength, speed, durability, power, combat)
 
-import {apiKey} from './key.js';
+import { apiKey } from './key.js';
 console.log(apiKey);
 
+
 // function to search the api for hero stats
-function pullHeroStats(searchTerm) {
-    fetch(`https://www.superheroapi.com/api.php/${apiKey}/search/${searchTerm}`)
+function pullHeroStats(heroName) {
+    fetch(`https://www.superheroapi.com/api.php/${apiKey}/search/${heroName}`)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
-            let heroStats = data.results[0].powerstats;
-            let heroStatsArray = Object.values(heroStats);
-            let heroStatsArrayInt = heroStatsArray.map(Number);
-            console.log(heroStatsArrayInt);
-            let overallPower = heroStatsArrayInt.reduce((a, b) => a + b, 0);
-            console.log(overallPower);
+            let heroStats = Object.values(data.results[0].powerstats);
+            let overallPower = Math.trunc(heroStats.reduce((total, stat) => total + parseInt(stat), 0) / heroStats.length)
+            console.log(`${heroName} : ${overallPower}`);
             return overallPower;
         })
         .catch(error => console.log(error));
 }
+pullHeroStats('batman');
 
 //function to search the API for the hero image
-function pullHeroImage(searchTerm) {
-    fetch(`https://www.superheroapi.com/api.php/${apiKey}/search/${searchTerm}`)
+function pullHeroImage(heroName) {
+    fetch(`https://www.superheroapi.com/api.php/${apiKey}/search/${heroName}`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -198,8 +274,8 @@ function pullHeroImage(searchTerm) {
 
 //function to search the API for the hero name
 
-function pullHeroName(searchTerm) {
-    fetch(`https://www.superheroapi.com/api.php/${apiKey}/search/${searchTerm}`)
+function pullHeroName(heroName) {
+    fetch(`https://www.superheroapi.com/api.php/${apiKey}/search/${heroName}`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
@@ -214,16 +290,14 @@ function pullHeroName(searchTerm) {
 function renderHeroCard(searchTerm) {
     let heroCard = document.createElement('div');
     heroCard.classList.add('hero-card');
-    let heroName = pullHeroName(searchTerm);
-    let heroImage = pullHeroImage(searchTerm);
-    let heroPower = pullHeroStats(searchTerm);
-    heroCard.innerHTML = `
-    <h2>${heroName}</h2>
-    <img src="${heroImage}" alt="${heroName}">
-    <h3>Power: ${heroPower}</h3>
-    `;
-    document.querySelector('.hero-card-container').appendChild(heroCard);
+    let heroImage = document.createElement('img');
+    heroImage.classList.add('hero-image');
+    heroImage.src = pullHeroImage(searchTerm);
+    let heroName = document.createElement('h2');
+    heroName.classList.add('hero-name');
+    heroName.textContent = pullHeroName(searchTerm);
+    heroCard.appendChild(heroImage);
+    heroCard.appendChild(heroName);
+    return heroCard;
+
 }
-renderHeroCard('batman')
-
-
