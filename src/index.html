@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+=======
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -55,11 +57,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-</head>
-<body ng-app="app">
-    <div ng-controller="MainCtrl">
-        <h1>Test Message</h1>
-    </div>
 
+    <!-- Include the CSS file here -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="key.js" type="module"></script>
+    <script defer src="index.js" type="module"></script>
+</head>
+<body>
+
+    <div id="main">
+        <h1 id="message">Test Message</h1>
+    </div>
+    <!-- Include the script tag here -->
+    <script src="index.js"></script>
 </body>
 </html>
