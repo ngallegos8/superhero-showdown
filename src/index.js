@@ -1,9 +1,3 @@
-//DELETE These lines
-
-// api key reference: 7448105941879772
-
-//DELETE above these lines 
-
 
 function fetchApiData() {
     const url = `https://superheroapi.com/api/${apiKey}/search/${searchTerm}`;
