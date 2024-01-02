@@ -6,7 +6,7 @@
 
 
 function fetchApiData() {
-    const url = `https://api.themoviedb.org/3/movie/550?api_key=7448105941879772`;
+    const url = `https://superheroapi.com/api/${apiKey}/search/${searchTerm}`;
     fetch(url)
         .then(response => response.json())
         .then(data => {
