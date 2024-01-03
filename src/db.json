@@ -1,0 +1,94 @@
+{
+    "heroes" : [
+        {
+            "id": "1",
+            "name": "A-Bomb",
+            "powerstats": {
+              "intelligence": "38",
+              "strength": "100",
+              "speed": "17",
+              "durability": "80",
+              "power": "24",
+              "combat": "64"
+            },
+            "image": {
+              "url": "https://www.superherodb.com/pictures2/portraits/10/100/10060.jpg"
+            }
+          },
+          {
+            "id": "2",
+            "name": "Abe Sapien",
+            "powerstats": {
+              "intelligence": "88",
+              "strength": "28",
+              "speed": "35",
+              "durability": "65",
+              "power": "100",
+              "combat": "85"
+            },
+            "image": {
+              "url": "https://www.superherodb.com/pictures2/portraits/10/100/956.jpg"
+            }
+          },
+          {
+            "id": "3",
+            "name": "Abin Sur",
+            "powerstats": {
+              "intelligence": "50",
+              "strength": "90",
+              "speed": "53",
+              "durability": "64",
+              "power": "99",
+              "combat": "65"
+            },
+            "image": {
+              "url": "https://www.superherodb.com/pictures2/portraits/10/100/1460.jpg"
+            }
+          },
+          {
+            "id": "4",
+            "name": "Abomination",
+            "powerstats": {
+              "intelligence": "63",
+              "strength": "80",
+              "speed": "53",
+              "durability": "90",
+              "power": "62",
+              "combat": "95"
+            },
+            "image": {
+              "url": "https://www.superherodb.com/pictures2/portraits/10/100/1.jpg"
+            }
+          },
+          {
+            "id": "5",
+            "name": "Abraxas",
+            "powerstats": {
+              "intelligence": "88",
+              "strength": "63",
+              "speed": "83",
+              "durability": "100",
+              "power": "100",
+              "combat": "55"
+            },
+            "image": {
+              "url": "https://www.superherodb.com/pictures2/portraits/10/100/181.jpg"
+            }
+          },
+          {
+            "id": "6",
+            "name": "Absorbing Man",
+            "powerstats": {
+                "intelligence": "38",
+                "strength": "80",
+                "speed": "25",
+                "durability": "100",
+                "power": "98",
+                "combat": "64"
+            },
+            "image": {
+                "url": "https://www.superherodb.com/pictures2/portraits/10/100/1448.jpg"
+            }
+        }
+    ]
+}

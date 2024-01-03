@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
-    <script src="key.js" type="module"></script>
-    <script src="index.js" type="module"></script>
-
+    <script defer src="index.js" type="module"></script>
     <title>Superhero Showdown</title>
 </head>
 <body>
@@ -18,18 +16,21 @@
     <hr/>
 
     <nav id="hero-list">
-    <!-- javascript make function to select this nav by id and forEach(hero) 1. create a new image element, 2. select hero image from API, 3. append to this nav, 4. add event listener for mouseover and 5. add event listener for click to select-->  
+    <!-- javascript make function to select this nav by id and forEach(hero) 
+        1. create a new image element, 
+        2. select hero image from API, 
+        3. append to this nav, 
+        4. add event listener for mouseover and 
+        5. add event listener for click to select-->  
     </nav>
     
-    <div id="hero-info">
-        <img id="hero-a-image" src="" />
-        <div>
-            <h2 id="hero-a-name">Name1</h2>
-        </div>
-        <img id="hero-b-image" src="" />
-        <div>
-            <h2 id="hero-b-name">Name2</h2>
-        </div>
+    <div id="hero-a-info">
+        <img id="hero-a-image" src="images/left_fight.jpeg" />
+        <h2 id="hero-a-name">Name1</h2>
+    </div>
+    <div id="hero-b-info">
+        <img id="hero-b-image" src="images/right_fight.jpeg" />
+        <h2 id="hero-b-name">Name2</h2>
     </div>
 
     <div>
@@ -54,30 +55,5 @@
                 </span>
         </ul>
     </footer>
-
-
-
-
-<!-- handle js -->
-<script src="index.js"></script>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-
-    <!-- Include the CSS file here -->
-    <link rel="stylesheet" href="style.css">
-    <script defer src="key.js" type="module"></script>
-    <script defer src="index.js" type="module"></script>
-</head>
-<body>
-
-    <div id="main">
-        <h1 id="message">Test Message</h1>
-    </div>
-    <!-- Include the script tag here -->
-    <script src="index.js"></script>
-
 </body>
 </html>
