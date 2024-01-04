@@ -48,6 +48,10 @@ body {
     margin-top: 10px;
 }
 
+.grayscale {
+    filter: grayscale(100%);
+}
+
 #fight {
     background-color: #FF0000;
     animation: bgColor 5s infinite linear;
