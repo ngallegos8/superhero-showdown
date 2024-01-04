@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
     <script defer src="index.js" type="module"></script>
     <title>Superhero Showdown</title>
@@ -16,21 +14,20 @@
     <hr/>
 
     <nav id="hero-list">
-    <!-- javascript make function to select this nav by id and forEach(hero) 
-        1. create a new image element, 
-        2. select hero image from API, 
-        3. append to this nav, 
-        4. add event listener for mouseover and 
-        5. add event listener for click to select-->  
+        <!-- Heroes will be dynamically added here by JavaScript -->
     </nav>
-    
-    <div id="hero-a-info">
-        <img id="hero-a-image" src="images/left_fight.jpeg" />
-        <h2 id="hero-a-name">Name1</h2>
-    </div>
-    <div id="hero-b-info">
-        <img id="hero-b-image" src="images/right_fight.jpeg" />
-        <h2 id="hero-b-name">Name2</h2>
+
+    <div class="selected-heroes-container">
+        <div id="hero-a-info">
+            <img id="hero-a-image" src="images/left_fight.jpeg" />
+            <h2 id="hero-a-name">Name1</h2>
+            <h2 id="hero-a-power">Powerstats</h2>
+        </div>
+        <div id="hero-b-info">
+            <img id="hero-b-image" src="images/right_fight.jpeg" />
+            <h2 id="hero-b-name">Name2</h2>
+            <h2 id="hero-b-power">Powerstats</h2>
+        </div>
     </div>
 
     <div>
@@ -40,19 +37,14 @@
     <div>
         <p id="result">Winner message displayed here</p>
     </div>
-    
-    <div>
-        <p id=""></p>
-    </div>
-
-    <footer id="footer">
+        <footer id="footer">
         <ul class="meta">
-                <span>
-                    Made by
-                    <a href="https://github.com/CCONLEY-FI" target="_blank">Chris</a>
-                     &
-                    <a href="https://github.com/ngallegos8" target="_blank">Nick</a>
-                </span>
+            <span>
+                Made by
+                <a href="https://github.com/CCONLEY-FI" target="_blank">Chris</a>
+                 &
+                <a href="https://github.com/ngallegos8" target="_blank">Nick</a>
+            </span>
         </ul>
     </footer>
 </body>
