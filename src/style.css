@@ -1,78 +1,75 @@
-/* body {
+body {
     background-image: url("https://static.vecteezy.com/system/resources/previews/025/755/011/non_2x/versus-vs-comics-style-background-vertical-template-pink-and-blue-comic-book-style-background-classic-pop-art-style-superhero-battle-intro-gradient-background-16-9-aspect-ratio-free-vector.jpg");
     background-color: #cccccc;
-   }
-
-#hero-a-image {
-    position: relative;
-    top: 45%;
-    left: 25%;
-} 
-
-#hero-a-name {
-  position: absolute;
-  top: 60%;
-  left: 25%;
-  font-size: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-#hero-b-image {
-    position: absolute;
-    top: 45%;
-    right: 25%;
-} 
+#hero-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
 
-#hero-b-name {
-  position: absolute;
-  top: 60%;
-  right: 25%;
-  font-size: 40px;
+.hero-image {
+    flex: 0 1 auto;
+    max-width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+.selected-heroes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#hero-a-info, #hero-b-info {
+    width: 30%;
+    margin: 0 10%;
+}
+
+.hero-info .hero-image {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-info .hero-name {
+    font-size: 40px;
+    margin-top: 10px;
 }
 
 #fight {
-    position: absolute;
-    top: 70%;
-    left: 50%;
+    background-color: #FF0000;
+    animation: bgColor 5s infinite linear;
+    width: 200px;
+    height: 100px;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
 }
-
 
 button {
-    background-color: #FF0000;
-  animation: bgColor 5s infinite linear;
-  width: 200px;
-  height: 100px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
+
 @keyframes bgColor {
-    50% {
-        background-color: antiquewhite;
+    0%, 100% {
+        background-color: #FF0000;
     }
-    100% {
+    50% {
         background-color: #0000FF;
     }
 }
-/* @keyframes bgColor {
-  12.5% {
-    background-color: #FF0000;
-  }
-  25% {
-    background-color: #FFA500;
-  }
-  37.5% {
-    background-color: #FFFF00;
-  }
-  50% {
-    background-color: #7FFF00;
-  }
-  62.5% {
-    background-color: #00FFFF;
-  }
-  75% {
-    background-color: #0000FF;
-  }
-  87.5% {
-    background-color: #9932CC;
-  }
-  100% {
-    background-color: #FF1493;
-  }
-} */
