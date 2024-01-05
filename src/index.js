@@ -97,7 +97,7 @@ function handleFight() {
     const winner = compareHeroes(heroA, heroB);
     displayWinner(winner);
 
-    resetHeroSelection();
+    // resetHeroSelection();
 }
 
 function compareHeroes(hero1, hero2) {
