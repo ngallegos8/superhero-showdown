@@ -55,7 +55,7 @@ function handleFight() {
     displayWinner(winner)
 
     // Reset hero selections after the fight
-    resetHeroSelection()
+    // resetHeroSelection()
 }
 
 function compareHeroes(hero1, hero2) {
@@ -74,15 +74,15 @@ function displayWinner(winner) {
     resultDiv.innerHTML = `<strong>Winner:</strong> ${winner.name}<br><img src="${winner.image.url}" alt="${winner.name}" style="max-width:200px;">`;
 }
 
-function resetHeroSelection() {
-    // Reset selected heroes
-    heroA = null
-    heroB = null
+// function resetHeroSelection() {
+//     // Reset selected heroes
+//     heroA = null
+//     heroB = null
 
-    // Reset the display for hero-a-info and hero-b-info to default
-    resetHeroDisplay('hero-a', 'images/left_fight.jpeg', 'Name1', 'Powerstats')
-    resetHeroDisplay('hero-b', 'images/right_fight.jpeg', 'Name2', 'Powerstats')
-}
+//     // Reset the display for hero-a-info and hero-b-info to default
+//     resetHeroDisplay('hero-a', 'images/left_fight.jpeg', 'Name1', 'Powerstats')
+//     resetHeroDisplay('hero-b', 'images/right_fight.jpeg', 'Name2', 'Powerstats')
+// }
 
 function resetHeroDisplay(heroPrefix, defaultImage, defaultName, defaultPowerStats) {
     document.getElementById(`${heroPrefix}-image`).src = defaultImage
