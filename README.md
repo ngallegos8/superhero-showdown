@@ -18,11 +18,11 @@ Installing
 A step-by-step series of examples that tell you how to get a development environment running.
 
 ## Clone the repository
-git clone [final repo link here] <===================== !!!!! change to final repo link when completed
-cd superhero-showdown
+git clone https://github.com/ngallegos8/superhero-showdown
+
 
 # Start the JSON server
-json-server --watch db.json
+json-server --watch src/db.json
 This will start the server at http://localhost:3000.
 
 Open the application
@@ -32,6 +32,7 @@ Open the index.html file in your web browser.
 Select Heroes: Click on the heroes' images in the navigation bar to select them for the showdown.
 Start the Showdown: Once two heroes are selected, click the "Fight!" button.
 View the Result: The winner based on the average of their power stats will be displayed.
+Add your own Hero: Provide info to create your personal favorite superhero in the input fields, click the "Add Hero" button and see how they stack up!
 
 
 ## Built With
